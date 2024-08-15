@@ -1,3 +1,4 @@
+import 'package:final_project/features/authentication/presentation/views/loginScreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,7 +11,7 @@ class finalApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(),
+      home: Loginscreen(),
     );
   }
 }
