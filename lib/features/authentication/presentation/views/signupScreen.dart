@@ -1,10 +1,14 @@
+import 'package:final_project/core/assets/auth_assets.dart';
+import 'package:final_project/core/assets/fonts.dart';
+import 'package:final_project/core/utils/approuter.dart';
 import 'package:final_project/features/authentication/presentation/views/widgets/GreenBottom.dart';
 import 'package:final_project/features/authentication/presentation/views/widgets/TextFormField.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 class Signupscreen extends StatelessWidget {
-  const Signupscreen({Key? key}) : super(key: key);
+  const Signupscreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +23,7 @@ class Signupscreen extends StatelessWidget {
                 height: 250,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage("lib/core/assets/LOGO FINAL 1.png")),
+                      image: AssetImage(AuthAssets.logo)),
                 ),
               ),
               SizedBox(height: 30,),
@@ -27,7 +31,7 @@ class Signupscreen extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 25),
                 child: Container(
                   width: 440.w,
-                  height: 600.h,
+                  height: 540.h,
                   padding: EdgeInsets.all(15),
                   decoration: BoxDecoration(
                       color: Color(0xFFFBD57D).withOpacity(0.5),
@@ -37,7 +41,7 @@ class Signupscreen extends StatelessWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(bottom: 10),
-                        child: Text("Email"),
+                        child: Text("Email",style: Fonts.LabelFont,),
                       ),
                       Textformfield(
                           icon: Icon(
@@ -46,10 +50,10 @@ class Signupscreen extends StatelessWidget {
                             size: 20,
                           ),
                           hint: "Enter your Email"),
-                      SizedBox(height:25.h),
+                      SizedBox(height:20.h),
                       Padding(
                         padding: const EdgeInsets.only(bottom: 10),
-                        child: Text("User Name"),
+                        child: Text("User Name",style: Fonts.LabelFont,),
                       ),
                       Textformfield(
                           icon: Icon(
@@ -58,10 +62,10 @@ class Signupscreen extends StatelessWidget {
                             size: 20,
                           ),
                           hint: "Enter your Name"),
-                      SizedBox(height:25.h),
+                      SizedBox(height:20.h),
                       Padding(
                         padding: const EdgeInsets.only(bottom: 10),
-                        child: Text("Password"),
+                        child: Text("Password",style: Fonts.LabelFont,),
                       ),
                       Textformfield(
                           icon: Icon(
@@ -70,10 +74,10 @@ class Signupscreen extends StatelessWidget {
                             size: 20,
                           ),
                           hint: "Enter your Password"),
-                      SizedBox(height:25.h),
+                      SizedBox(height:20.h),
                       Padding(
                         padding: const EdgeInsets.only(bottom: 10),
-                        child: Text("Confirm Password"),
+                        child: Text("Confirm Password",style: Fonts.LabelFont,),
                       ),
                       Textformfield(
                           icon: Icon(
@@ -90,13 +94,15 @@ class Signupscreen extends StatelessWidget {
                         children: [
                           Text(
                             "Already have an account?",
-                            style: TextStyle(color: Colors.black),
+                            style: TextStyle(color: Colors.black,fontFamily: 'Comfortaa'),
                           ),
                           InkWell(
-                              onTap: () {},
+                              onTap: () {GoRouter.of(context).push(
+                                Approuter.LoginPath,
+                              );},
                               child: Text(
                                 " Log In",
-                                style: TextStyle(color: Colors.redAccent),
+                                style: TextStyle(color: Colors.redAccent,fontFamily:'Comfortaa'),
                               ))
                         ],
                       )

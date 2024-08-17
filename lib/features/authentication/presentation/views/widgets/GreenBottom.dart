@@ -17,7 +17,7 @@ class Greenbottom extends StatelessWidget {
               backgroundColor: Color(0xFF20473E),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10))),
-          child: Text(text, style: TextStyle(color: Colors.white),)),
+          child: Text(text, style: TextStyle(color: Colors.white,fontFamily: 'Comfortaa',fontSize: 15),)),
     );
   }
 }

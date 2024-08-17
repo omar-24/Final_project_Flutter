@@ -1,7 +1,4 @@
-import 'package:final_project/features/authentication/presentation/views/forgetpasswordScreen.dart';
-import 'package:final_project/features/authentication/presentation/views/loginScreen.dart';
-import 'package:final_project/features/authentication/presentation/views/signupScreen.dart';
-import 'package:final_project/features/authentication/presentation/views/verficationScreen.dart';
+import 'package:final_project/core/utils/approuter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -19,11 +16,11 @@ class finalApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_,child){
-        return MaterialApp(
-          home:child,
+        return MaterialApp.router(
+          routerConfig: Approuter.router,
+          debugShowCheckedModeBanner: false,
         );
       },
-      child: Signupscreen()
     );
   }
 }
