@@ -4,6 +4,8 @@ import 'package:final_project/features/authentication/presentation/views/signupS
 import 'package:final_project/features/authentication/presentation/views/splash_screen.dart';
 import 'package:final_project/features/authentication/presentation/views/verficationScreen.dart';
 import 'package:final_project/features/home/presentation/views/home_screen.dart';
+import 'package:final_project/features/home/presentation/views/widget/custom_drawer.dart';
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../features/authentication/presentation/views/onboarding_screen.dart';
@@ -15,6 +17,8 @@ abstract class Approuter{
   static const ForgetPath="/forgetpassword";
   static const VervicationPath="/verfication";
   static const HomePath="/home";
+  static const DrawerPath="/Drawer";
+
 
   static final router = GoRouter(
     routes:[
@@ -45,6 +49,10 @@ abstract class Approuter{
       GoRoute(
         path: HomePath,
         builder: (context, state) => const HomeScreen(),
+      ),
+      GoRoute(
+        path: DrawerPath,
+        builder: (context, state) => const CustomDrawer(),
       ),
     ],
   );
