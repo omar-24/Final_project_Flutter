@@ -87,7 +87,7 @@ class Signupscreen extends StatelessWidget {
                           ),
                           hint: "Confirm Password"),
                       SizedBox(height:30.h),
-                      Greenbottom(text: "SIGN UP",ONTAP: (){},),
+                      Greenbottom(text: "SIGN UP",ONTAP: () => context.go(Approuter.HomePath),),
                       SizedBox(height: 20,),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,

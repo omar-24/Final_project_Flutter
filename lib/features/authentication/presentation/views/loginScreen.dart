@@ -81,7 +81,7 @@ class Loginscreen extends StatelessWidget {
                       ),
                       Greenbottom(
                           text: "LOGIN",
-                          ONTAP: () => context.go(Approuter.SignupPath)),
+                          ONTAP: () => context.go(Approuter.HomePath)),
                       SizedBox(
                         height: 10,
                       ),

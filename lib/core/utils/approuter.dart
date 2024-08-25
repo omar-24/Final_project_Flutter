@@ -3,6 +3,7 @@ import 'package:final_project/features/authentication/presentation/views/loginSc
 import 'package:final_project/features/authentication/presentation/views/signupScreen.dart';
 import 'package:final_project/features/authentication/presentation/views/splash_screen.dart';
 import 'package:final_project/features/authentication/presentation/views/verficationScreen.dart';
+import 'package:final_project/features/home/presentation/views/home_screen.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../features/authentication/presentation/views/onboarding_screen.dart';
@@ -11,8 +12,9 @@ abstract class Approuter{
   static const OnboardingPath="/onboarding";
   static const LoginPath="/login";
   static const SignupPath="/signup";
-  static const ForgetPath="/Forgetpassword";
+  static const ForgetPath="/forgetpassword";
   static const VervicationPath="/verfication";
+  static const HomePath="/home";
 
   static final router = GoRouter(
     routes:[
@@ -39,6 +41,10 @@ abstract class Approuter{
       GoRoute(
         path: VervicationPath,
         builder: (context, state) => const Verficationscreen(),
+      ),
+      GoRoute(
+        path: HomePath,
+        builder: (context, state) => const HomeScreen(),
       ),
     ],
   );
