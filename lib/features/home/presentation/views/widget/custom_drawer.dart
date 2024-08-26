@@ -1,4 +1,5 @@
 import 'package:final_project/core/assets/auth_assets.dart';
+import 'package:final_project/features/home/presentation/views/widget/langauge_dropdown.dart';
 import 'package:flutter/material.dart';
 
 class CustomDrawer extends StatelessWidget {
@@ -7,15 +8,21 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(backgroundColor: Colors.white,
-      child: Container(
-        padding: EdgeInsets.all(15),
+      child: Padding(
+        padding: const EdgeInsets.all(20),
         child: ListView(
           children: [
-            Container(
-              width: 100,
-              height: 150,
-              decoration: BoxDecoration(
-                  image: DecorationImage(image: AssetImage(AuthAssets.logo))),
+            Align(
+              alignment:Alignment.centerLeft,
+              child: Padding(
+                padding: const EdgeInsets.all(15),
+                child: Container(
+                  width: 100,
+                  height: 150,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(image: AssetImage(AuthAssets.logo))),
+                ),
+              ),
             ),
             SizedBox(height: 30),
             InkWell(
@@ -33,17 +40,9 @@ class CustomDrawer extends StatelessWidget {
             SizedBox(
               height: 15,
             ),
-            InkWell(
-              onTap: () {
-                Navigator.pushNamed(context, "CartScreen");
-              },
-              child: ListTile(
-                leading: Icon(Icons.language,color: Colors.red),
-                title: Text(
-                  "Languge",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-              ),
+            ListTile(
+              leading: Icon(Icons.language,color: Colors.red),
+              title:LangaugeDropdown(),
             ),
             SizedBox(
               height: 15,

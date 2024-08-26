@@ -8,11 +8,11 @@ import 'package:shape_to_go/shape_to_go.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+<<<<<<< HEAD
       /*appBar: AppBar(
         actionsIconTheme: IconThemeData(color: Colors.white),
         backgroundColor: Colors.transparent,
@@ -24,6 +24,9 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       drawer: CustomDrawer(),*/
+=======
+      drawer: CustomDrawer(),
+>>>>>>> origin/main
       body: CustomScrollView(
         slivers: [
           SliverToBoxAdapter(child: HomeBackground(),),
