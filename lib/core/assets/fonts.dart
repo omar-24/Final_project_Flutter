@@ -19,6 +19,14 @@ abstract class Fonts
     letterSpacing: -0.3,
     color: Color(0xFFFFC100),
   );
+  static const TextSize20 = TextStyle(
+    fontFamily: 'Comfortaa',
+    fontWeight: FontWeight.w400,
+    fontSize: 20,
+    height: 22.3 / 16,
+    letterSpacing: -0.3,
+    color: Color(0xFF383838),
+  );
   static const skipFont = TextStyle(
       fontFamily: 'Comfortaa',
       fontWeight: FontWeight.w400,
@@ -26,6 +34,14 @@ abstract class Fonts
       height: 18.96 / 16,
       letterSpacing: -0.3,
       color: Colors.white,
+  );
+  static const buttonText = TextStyle(
+    fontFamily: 'Glory',
+    fontWeight: FontWeight.w500,
+    fontSize: 16,
+    height: 17.92 / 16,
+    letterSpacing: -0.3,
+    color: Colors.white,
   );
 
   static const LabelFont = TextStyle(

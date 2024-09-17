@@ -1,4 +1,6 @@
 import 'package:final_project/core/utils/approuter.dart';
+import 'package:final_project/features/authentication/presentation/views/splash_screen.dart';
+import 'package:final_project/features/home/presentation/views/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -21,6 +23,7 @@ class finalApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
         );
       },
+      child: HomeScreen(),
     );
   }
 }

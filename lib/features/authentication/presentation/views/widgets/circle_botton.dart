@@ -31,7 +31,7 @@ class CircleBotton extends StatelessWidget {
             //   context,
             //   MaterialPageRoute(builder: (context) => Loginscreen()),
             // );
-            GoRouter.of(context).push(
+            GoRouter.of(context).pushReplacement(
               Approuter.LoginPath,
             );
           }
