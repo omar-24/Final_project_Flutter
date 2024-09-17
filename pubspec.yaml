@@ -40,6 +40,10 @@ dependencies:
   flutter_otp_text_field: ^1.1.3+2
   go_router: ^14.2.3
   flutter_screenutil: ^5.9.3
+  syncfusion_flutter_datepicker: ^26.2.13
+  table_calendar: ^3.1.2
+  numberpicker: ^2.1.2
+  wheel_chooser: ^1.1.2
 
 dev_dependencies:
   carousel_slider: ^4.0.0
@@ -85,6 +89,7 @@ flutter:
   fonts:
     - family: Comfortaa
       fonts:
+        - asset: lib/core/assets/MyFlutterApp.ttf
         - asset: Comfortaa/static/Comfortaa-Regular.ttf
         - asset: Comfortaa/static/Comfortaa-Bold.ttf
           weight: 700

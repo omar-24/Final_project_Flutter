@@ -1,7 +1,7 @@
 import 'package:final_project/core/assets/auth_assets.dart';
 import 'package:final_project/core/assets/fonts.dart';
 import 'package:final_project/core/utils/approuter.dart';
-import 'package:final_project/features/authentication/presentation/views/widgets/GreenBottom.dart';
+import 'package:final_project/features/authentication/presentation/views/widgets/GreenBotton.dart';
 import 'package:final_project/features/authentication/presentation/views/widgets/TextFormField.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -14,6 +14,13 @@ class Signupscreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios_new),
+          onPressed: () {Navigator.pop(context);},
+        ),
+      ),
       body: Center(
         child: SingleChildScrollView(
           child: Column(
@@ -87,7 +94,7 @@ class Signupscreen extends StatelessWidget {
                           ),
                           hint: "Confirm Password"),
                       SizedBox(height:30.h),
-                      Greenbottom(text: "SIGN UP",ONTAP: () => context.go(Approuter.HomePath),),
+                      Greenbotton(text: "SIGN UP",ONTAP: () => context.go(Approuter.HomePath),),
                       SizedBox(height: 20,),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,

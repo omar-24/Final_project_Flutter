@@ -1,7 +1,8 @@
 import 'package:final_project/core/assets/auth_assets.dart';
 import 'package:final_project/core/utils/approuter.dart';
 import 'package:final_project/features/authentication/presentation/views/widgets/dots.dart';
-import 'package:final_project/features/home/presentation/views/widget/carousel_slider.dart';
+import 'package:final_project/features/home/presentation/views/widget/Home_carousel_slider.dart';
+import 'package:final_project/features/home/presentation/views/widget/pageIndicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
@@ -14,16 +15,14 @@ class HomeBackground extends StatefulWidget {
 }
 
 class _HomeBackgroundState extends State<HomeBackground> {
-  PageController _pageController = PageController();
-  int _currentPage = 0;
-
+  
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Carousel(),
+        HomeCarousel(),
         Container(
-          color: Colors.black.withOpacity(.4),
+          color: Colors.black.withOpacity(.3),
           width: double.infinity,
           height: MediaQuery.of(context).size.height * 0.4,
         ),
@@ -31,7 +30,7 @@ class _HomeBackgroundState extends State<HomeBackground> {
           top: 40.h,
           left: 30.w,
           child: InkWell(
-              onTap: () => context.go(Approuter.DrawerPath),
+              onTap: () => Scaffold.of(context).openDrawer(),
               child: Icon(
                 Icons.list,
                 color: Colors.white,
@@ -57,7 +56,9 @@ class _HomeBackgroundState extends State<HomeBackground> {
               borderRadius: BorderRadius.circular(20),
             ),
             child: InkWell(
-              onTap: () {},
+              onTap: () {GoRouter.of(context).push(
+                Approuter.RoomsPath,
+              );},
               child: Row(
                 children: [
                   Icon(
@@ -107,6 +108,7 @@ class _HomeBackgroundState extends State<HomeBackground> {
               style: TextStyle(
                   fontFamily: "Comfortaa", fontSize: 21, color: Colors.white),
             )),
+        
       ],
     );
   }

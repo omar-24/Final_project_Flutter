@@ -40,15 +40,61 @@ abstract class Fonts
     fontSize: 14,
     color: Color(0xFF787878),
   );
-  static const H1Fonts = TextStyle(
+
+
+  static const H1FontsNormal = TextStyle(
+    fontFamily: 'Comfortaa',
+    fontSize: 28,
+    color: Colors.black,
+  );
+  static const H2FontsNormal = TextStyle(
+    fontFamily: 'Comfortaa',
+    fontSize: 24,
+    color: Colors.black,
+  );
+  static const H2Fontsbold = TextStyle(
+    fontFamily: 'Comfortaa',
+    fontWeight: FontWeight.bold,
+    fontSize: 24,
+    color: Colors.black,
+  );
+  static const H3FontsNormal = TextStyle(
     fontFamily: 'Comfortaa',
     fontWeight: FontWeight.bold,
     fontSize: 20,
-    color: Color(0xFF101623),
+    color: Colors.black,
   );
-  static const H4Fonts = TextStyle(
+  static const H4FontsNormal = TextStyle(
+    fontFamily: 'Comfortaa',
+    fontWeight: FontWeight.bold,
+    fontSize: 18,
+    color: Colors.black,
+  );
+  static const H5FontsNormal = TextStyle(
+    fontFamily: 'Comfortaa',
+    fontWeight: FontWeight.bold,
+    fontSize: 16,
+    color: Colors.black,
+  );
+  static const H5Fontsw400 = TextStyle(
+    fontFamily: 'Comfortaa',
+    fontWeight: FontWeight.w400,
+    fontSize: 16,
+    color: Colors.black,
+  );
+  static const H6FontsGray = TextStyle(
     fontFamily: 'Comfortaa',
     fontSize: 14,
     color: Color(0xFF787878),
+  );
+  static const H6FontsNormal = TextStyle(
+    fontFamily: 'Comfortaa',
+    fontSize: 14,
+    color: Colors.black,
+  );
+  static const eventPageFont=TextStyle(
+    fontFamily: 'Comfortaa',
+    fontSize: 16,
+    color: Colors.black,
   );
 }

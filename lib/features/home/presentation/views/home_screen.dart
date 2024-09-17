@@ -1,4 +1,4 @@
-import 'package:final_project/features/home/presentation/views/widget/carousel_slider.dart';
+import 'package:final_project/features/home/presentation/views/widget/Home_carousel_slider.dart';
 import 'package:final_project/features/home/presentation/views/widget/custom_drawer.dart';
 import 'package:final_project/features/home/presentation/views/widget/home_background.dart';
 import 'package:flutter/material.dart';

@@ -1,7 +1,7 @@
 import 'package:final_project/core/assets/auth_assets.dart';
 import 'package:final_project/core/assets/fonts.dart';
-import 'package:final_project/features/authentication/presentation/views/widgets/GreenBottom.dart';
-import 'package:final_project/features/authentication/presentation/views/widgets/TextFormField.dart';
+import 'package:final_project/features/authentication/presentation/views/widgets/GreenBotton.dart';
+import 'package:final_project/features/authentication/presentation/views/widgets/verfication_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 
@@ -12,6 +12,13 @@ class Verficationscreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios_new),
+          onPressed: () {Navigator.pop(context);},
+        ),
+      ),
       body: Center(
         child: SingleChildScrollView(
           child: Column(
@@ -39,12 +46,12 @@ class Verficationscreen extends StatelessWidget {
                     children: [
                       Text(
                         "Enter Verification Code",
-                        style: Fonts.H1Fonts,
+                        style: Fonts.H2FontsNormal,
                       ),
                       SizedBox(height: 20,),
                       Text(
                           "Enter code that we have sent to your number ",
-                          style: Fonts.H4Fonts),
+                          style: Fonts.H6FontsGray),
                       Text(
                           "012345678*** ",
                           style: TextStyle(color: Color(0xFF101623), fontSize: 16,height: 2,fontFamily: 'Comfortaa')),
@@ -60,55 +67,13 @@ class Verficationscreen extends StatelessWidget {
                       SizedBox(
                         height: 40,
                       ),
-                      Greenbottom(
+                      Greenbotton(
                         text: "Verify",
                         ONTAP: () {
                           showDialog(
                             context: context,
                             builder: (BuildContext context) {
-                              return AlertDialog(backgroundColor: Colors.white,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10.0),
-                                ),
-                                content: SingleChildScrollView(
-                                  // To handle overflow
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      // Add your illustration here
-                                      Image.asset(
-                                          AuthAssets.dialog),
-                                      SizedBox(height: 20),
-                                      Text(
-                                        'Success',
-                                        style: TextStyle(
-                                            fontSize: 24,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                      SizedBox(height: 10),
-                                      Text(
-                                        'You have successfully reset your password.',
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(fontSize: 16),
-                                      ),
-                                      SizedBox(height: 20),
-                                      // Wrap buttons in a Row to show them horizontally
-                                      ElevatedButton(
-                                        onPressed: () {
-                                          Navigator.of(context)
-                                              .pop(); // Close the dialog
-                                        },
-                                        style: ElevatedButton.styleFrom(
-                                            fixedSize:Size(223, 50),
-                                            backgroundColor: Color(0xFF20473E),
-                                            shape: RoundedRectangleBorder(
-                                                borderRadius: BorderRadius.circular(10))),
-                                        child: Text('Done',style:TextStyle(color: Colors.white,fontSize: 17)),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              );
+                              return VerficationDialog();
                             },
                           );
                         },

@@ -12,3 +12,17 @@ abstract class HomeAssets{
   static String background ="images/Rectangle 346.png";
 
 }
+
+abstract class PhotoSessionAssets{
+
+  static String photo1 ="images/Frame 30014.png";
+  static String photo2 ="images/Frame 30014 (1).png";
+  static String photo3 ="images/Frame 30014 (2).png";
+}
+
+abstract class OffersFeture{
+
+  static String offer ="images/offers.png";
+  static String event ="images/event.png";
+  static String photo3 ="images/Frame 30014 (2).png";
+}
