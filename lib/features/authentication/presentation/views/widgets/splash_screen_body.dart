@@ -28,7 +28,7 @@ class _SplashScreenBodyState extends State<SplashScreenBody> with SingleTickerPr
       //   return const OnboardingScreen();
       // }));
 
-      GoRouter.of(context).push(
+      GoRouter.of(context).pushReplacement(
         Approuter.OnboardingPath,
       );
     });

@@ -10,6 +10,8 @@ import 'package:final_project/features/membership/presentation/views/membership_
 import 'package:final_project/features/offers/presentation/views/event_details_screen.dart';
 import 'package:final_project/features/offers/presentation/views/event_screen.dart';
 import 'package:final_project/features/offers/presentation/views/offer_screen.dart';
+import 'package:final_project/features/authentication/presentation/views/splash_screen.dart';
+import 'package:final_project/features/home/presentation/views/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -39,5 +41,5 @@ class finalApp extends StatelessWidget {
     return MaterialApp(
       home: PhotosessionScreen(),
     );
-  }
+}
 }
